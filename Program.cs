@@ -13,7 +13,6 @@ namespace Palindrome
             while (true)
             {
 
-
                 Console.WriteLine("Enter a word/phrase to check if it is a Palindrome." +
                                     "\n Type \"Quit\" to exit)");
                 String input = Console.ReadLine();
@@ -26,15 +25,18 @@ namespace Palindrome
                 {
                     char[] charArr = input.ToCharArray();
                     String word = new String(charArr);
-                    String reverseWord ="";
-                    for(int i = charArr.Length -1;i > -1 ;i--)
-                    {
-                        
-                        reverseWord += charArr[i];
-                    }
+                    Console.WriteLine("Your word is "+word);
+                    Array.Reverse(charArr);
+                    String reverseWord = new string(charArr);
+                    Console.WriteLine("Your word reversed is "+reverseWord);
+                    
                     if(word.Replace(" ","") == reverseWord.Replace(" ", ""))
                     {
                         Console.WriteLine("It's a Palindrome");
+                    }
+                    else
+                    {
+                        Console.WriteLine("It's not a Palindrome");
                     }
                     
                 }
