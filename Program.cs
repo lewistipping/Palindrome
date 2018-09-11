@@ -25,12 +25,12 @@ namespace Palindrome
                 {
                     char[] charArr = input.ToCharArray();
                     String word = new String(charArr);
-                    Console.WriteLine("Your word is "+word);
+                    Console.WriteLine("Your word is "+word.ToLower());
                     Array.Reverse(charArr);
                     String reverseWord = new string(charArr);
-                    Console.WriteLine("Your word reversed is "+reverseWord);
+                    Console.WriteLine("Your word reversed is "+reverseWord.ToLower());
                     
-                    if(word.Replace(" ","") == reverseWord.Replace(" ", ""))
+                    if(word.Replace(" ","").ToLower() == reverseWord.Replace(" ", "").ToLower())
                     {
                         Console.WriteLine("It's a Palindrome");
                     }
